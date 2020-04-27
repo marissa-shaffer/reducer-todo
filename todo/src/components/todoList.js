@@ -11,8 +11,7 @@ const TodoList = props => {
                 Clear Completed
             </button>
         </div>
-    )
-    
-}
+    );
+};
 
 export default TodoList;
