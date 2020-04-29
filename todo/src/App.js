@@ -6,8 +6,9 @@ import TodoList from "./components/TodoList";
 import './App.css';
 
 const App = () => {
-
-  const [{tasks}, dispatch] = useReducer(todoReducer, initialState);
+  
+  const [tasks, dispatch] = useReducer(todoReducer, initialState);
+  console.log(tasks)
 
   const addTodo = (e, task) => {
     e.preventDefault();
@@ -37,7 +38,7 @@ const App = () => {
         <TodoForm addTodo={addTodo} />
       </header>
       <TodoList 
-        todo={tasks}
+        tasks={tasks.task}
         toggleTodo={toggleTodo}
         clearCompleted={clearCompleted} 
         />
